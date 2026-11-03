@@ -1,0 +1,34 @@
+# 统一换行与编码，避免 Windows/Linux 协作者产生无意义 diff
+* text=auto eol=lf
+
+# Java / Spring 资源
+*.java   text eol=lf
+*.xml    text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.properties text eol=lf
+*.sql    text eol=lf
+*.md     text eol=lf
+*.json   text eol=lf
+
+# Windows 脚本保留 CRLF
+*.cmd    text eol=crlf
+*.bat    text eol=crlf
+*.ps1    text eol=crlf
+
+# 二进制
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.ico    binary
+*.jar    binary
+*.db     binary
+
+# 语言统计：把前端静态资源视为代码而非文档
+*.js     linguist-language=JavaScript
+*.css    linguist-language=CSS
+src/main/resources/static/** linguist-vendored=false
+src/main/resources/static/vendor/** linguist-vendored=true
+*.md     linguist-documentation=true
